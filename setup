@@ -9,3 +9,6 @@ set -x
 pwd
 
 echo "Your solution goes here"
+
+nft_conf = '/etc/nftables.conf'
+sed -i /"DROPPING PACKET"/d $nft_conf
