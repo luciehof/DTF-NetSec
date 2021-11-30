@@ -11,7 +11,8 @@ pwd
 echo "Your solution goes here"
 
 nft_conf='/etc/nftables.conf'
-sed -i /"DROPPING PACKET"/d $nft_conf
+sudo sed -i /"DROPPING PACKET"/d $nft_conf
 sudo systemctl restart nftables
 
-nft add rule inet filter input ip saddr 129.132.121.162 tcp dport 5432 accept
+sudo nft add rule inet filter input ip saddr 129.132.121.162 tcp dport 5432 accept
+sudo nft add rule inet filter input tcp dport 5432 reject
