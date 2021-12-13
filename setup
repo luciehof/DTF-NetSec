@@ -16,3 +16,6 @@ sudo systemctl restart nftables
 
 sudo nft add rule inet filter input ip saddr 129.132.121.162 tcp dport 5432 accept
 sudo nft add rule inet filter input tcp dport 5432 reject
+
+sudo sed -i 's/location \/app/location \/app\//' /etc/nginx/sites-enabled/company-app.conf
+sudo systemctl restart nginx
