@@ -25,4 +25,4 @@ sudo apt install -y snapd
 sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
-sudo certbot --server http://acme.dtf.netsec.inf.ethz.ch/acme/default/directory --register-unsafely-without-email --noninteractive -d lhoffman.student.dtf.netsec.inf.ethz.ch --agree-tos
+sudo certbot --nginx --server http://acme.dtf.netsec.inf.ethz.ch/acme/default/directory --register-unsafely-without-email --noninteractive -d lhoffman.student.dtf.netsec.inf.ethz.ch --agree-tos
